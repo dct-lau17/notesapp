@@ -2,14 +2,18 @@ class Notes
 
 	attr_reader :title
 	attr_reader :body
+	attr_reader :notes
 
-  def title(title)
-		title
+
+	def initialize(title, body)
+		@notes = []
+		@title = title
+		@body = body
 	end
 
-  def body(body)
-		body
+  def store_note
+		note = {@title => @body}
+    @notes << note
 	end
-
 
 end
